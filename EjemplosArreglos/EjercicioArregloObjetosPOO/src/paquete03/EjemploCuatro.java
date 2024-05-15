@@ -9,7 +9,7 @@ import paquete01.Calificacion;
 import paquete01.Profesor;
 
 
-public class Ejemplo {
+public class EjemploCuatro {
     public static void main(String[] args) {
         // crear un arreglo de objetos de tipo Calificacion
         
@@ -17,17 +17,21 @@ public class Ejemplo {
         Profesor profesor2 = new Profesor ("Richard", "nombramiento");
         Calificacion [] calificaciones = new Calificacion[2];
         
-        Calificacion c = new Calificacion(10, "Computación");
-        Calificacion c2 = new Calificacion(9, "Electrónica");
+        Calificacion c = new Calificacion(10, "Computación", profesor1);
+        Calificacion c2 = new Calificacion(9, "Electrónica", profesor2);
         
         calificaciones[0] = c;
         calificaciones[1] = c2;
         
+        // esta invocando a un metodo obtenerProfesor que es de tipo Profesor
+        // por lo tanto en el mismo se hace llamado a obtenerNombre de tipo String 
+        
         for (int i = 0; i < calificaciones.length; i++) {
             Calificacion objetoCalificacion = calificaciones[i];
-            System.out.printf("%s - %.2f\n", 
+            System.out.printf("%s - %.2f - Profesor(%s)\n",
                     objetoCalificacion.obtenerNombreMateria(),
-                    objetoCalificacion.obtenerNota());
+                    objetoCalificacion.obtenerNota(),
+                    objetoCalificacion.obtenerProfesor().obtenerNombre());
         }
         
     }

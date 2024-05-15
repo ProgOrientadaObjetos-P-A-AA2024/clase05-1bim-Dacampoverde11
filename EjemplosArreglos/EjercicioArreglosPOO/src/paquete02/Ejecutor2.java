@@ -11,15 +11,24 @@ import paquete01.LibretaCalificacion;
  * @author utpl
  */
 public class Ejecutor2 {
-    public static void main (String [] args){
-        double [] notas = {10, 9, 8 ,10};
+
+    public static void main(String[] args) {
+
+        double[] notas = {10, 9, 8, 10};
         String nombreEstudiante = "Rene Elizalde";
+        LibretaCalificacion x = new LibretaCalificacion(
+                nombreEstudiante,
+                notas);
         
-        LibretaCalificacion x = new LibretaCalificacion (nombreEstudiante, notas);
-        x.establecerPromedio();
+        x.establecerPromedio();      
         x.establecerPromedioCualitativo();
-        System.out.printf("%s",x);
-        
+        // si es que no se llama a estos 2 metodos no podremos obtener el valor 
+        // del promedio de las calificaciones ya que mediante el metodo 
+        // realizamos el calculo del mismo y si no se lo hace dara de promedio
+        // el valor de 0, y si no llamamos al metodo del promedio cualitativo 
+        // no podra establecerle el valor y retornara un valor nulo (null)
+        System.out.printf("%s", x);
+
     }
-    
+
 }
