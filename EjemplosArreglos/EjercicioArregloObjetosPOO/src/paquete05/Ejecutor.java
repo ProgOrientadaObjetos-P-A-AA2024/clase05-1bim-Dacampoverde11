@@ -17,6 +17,12 @@ public class Ejecutor {
         Profesor profesor2 = new Profesor("Gregory Walsh", "nombramiento");
         Profesor profesor3 = new Profesor("Kevin Page", "nombramiento");
         
+        c1.establecerProfesor(profesor1);
+        c2.establecerProfesor(profesor2);
+        c3.establecerProfesor(profesor3);
+        // ocupo el metodo establecer profesor para sobrescribir y de esta forma
+        // no manda simepre los datos preestablecidos en el constructor.
+        
                 
         Calificacion [] lista = {c1, c2, c3}; 
         
