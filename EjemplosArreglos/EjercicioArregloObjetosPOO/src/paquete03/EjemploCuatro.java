@@ -14,7 +14,7 @@ public class EjemploCuatro {
         // crear un arreglo de objetos de tipo Calificacion
         
         Profesor profesor1 = new Profesor ("Franco", "nombramiento");
-        Profesor profesor2 = new Profesor ("Richard", "nombramiento");
+        Profesor profesor2 = new Profesor ("Richard", "contrato");
         Calificacion [] calificaciones = new Calificacion[2];
         
         Calificacion c = new Calificacion(10, "Computación", profesor1);
@@ -28,10 +28,11 @@ public class EjemploCuatro {
         
         for (int i = 0; i < calificaciones.length; i++) {
             Calificacion objetoCalificacion = calificaciones[i];
-            System.out.printf("%s - %.2f - Profesor(%s)\n",
+            System.out.printf("%s - %.2f - Profesor(%s - %s)\n",
                     objetoCalificacion.obtenerNombreMateria(),
                     objetoCalificacion.obtenerNota(),
-                    objetoCalificacion.obtenerProfesor().obtenerNombre());
+                    objetoCalificacion.obtenerProfesor().obtenerNombre(),
+                    objetoCalificacion.obtenerProfesor().obtenerTipo());
         }
         
     }
